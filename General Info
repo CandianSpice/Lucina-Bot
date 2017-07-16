@@ -1,9 +1,10 @@
 import discord
 from discord.ext.commands import Bot
+my_bot = Bot(command_prefix="+")
 @my_bot.event
 async def on_read():
     print("Client logged in")
 @my_bot.command()
 async def hello(*args):
-    return await my_bot.say("Hello, world!")
+    return await my_bot.say("Our bonds give me strength!")
 my_bot.run("{MzM1OTQzNjkyMTk4MzQ2NzU1.DE0k9w.pO6BGw98q6qI9U8ez_ZGC_1mhC0}")
