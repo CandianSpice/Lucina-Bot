@@ -1,10 +1,22 @@
-import discord
-from discord.ext.commands import Bot
-my_bot = Bot(command_prefix="+")
-@my_bot.event
-async def on_read():
-    print("Client logged in")
-@my_bot.command()
-async def hello(*args):
-    return await my_bot.say("Our bonds give me strength!")
-my_bot.run("{MzM1OTQzNjkyMTk4MzQ2NzU1.DE0k9w.pO6BGw98q6qI9U8ez_ZGC_1mhC0}")
+const Discord = require('discord.js');
+const client = new Discord.Client();
+
+client.on('ready', () => {
+  console.log('Our bonds give us strength!');
+});
+
+client.on('message', message => {
+  if (message.content === 'Rules ') {
+    message.reply('1.) Don't be a jerk. If you're just playing around, make it clear. If you feel like you are a victim of someone's joking gone too far, you need to make sure that person knows. 
+2.) No NSFW content. 
+3.) Got any cool unit builds?
+4.) Please refrain from spoiling games. Especially Fire Emblem games, since it's likely people in the chat are in the middle of playing them. 
+5.) Fire Emblem is bad and you should feel bad. 
+6.) Oliver is more beautiful than we mortals deserve. 
+7.) Don't spam too much. If you have something complicated to say, keep it in one concise message. No need to post a dozen different messages for one sentence. 
+8.) Admins are not allowed to abuse their powers. 
+9.) IkeIkeIkeIkeIkeIkeIkeIkeIkeIkeIkeIkeIkeIkeIke');
+  }
+});
+
+client.login('MzM1OTQzNjkyMTk4MzQ2NzU1.DE0k9w.pO6BGw98q6qI9U8ez_ZGC_1mhC0');
